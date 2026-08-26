@@ -1,0 +1,45 @@
+{% extends 'base/base.html'%}
+
+{% load static %}
+
+{% block title %}
+    {{ pokemon.name }}
+{% endblock %}
+
+{% block extrastatic %}
+    <link rel="stylesheet" href="{% static 'pokemon/info_poke.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<p>Nombre: {{ pokemon.name }}</p>
+
+<P>Official Art: <img src="{{ imagen }}" alt="{{ pokemon.name }}"></P>
+
+<p>Altura: {{ pokemon.height }} </p>
+
+<p>Peso: {{ pokemon.weight }} </p>
+
+
+<p>tipo:</p>
+{% for tipo in pokemon.types %}
+   <a href="{% url 'pokemon:types' tipo.type.name %}" class="tipo-pokemon {{ tipo.type.name }}">{{ tipo.type.name }}</a>
+{% endfor %}
+<br>
+<br>
+<p>Habilidades:</p>
+{% for habilidades in pokemon.abilities %}
+    <li>{{ habilidades.ability.name }}</li>
+{% empty %}
+    <p>No hay habilidades registradas.</p>
+{% endfor %}
+<br>
+<p>Movimientos:</p>
+{% for movimientos in pokemon.moves %}
+    <a>{{ movimientos.move.name }}, </a>
+{% empty %}
+    <p>No hay movimientos registrados.</p>
+{% endfor %}
+
+
+{% endblock%}

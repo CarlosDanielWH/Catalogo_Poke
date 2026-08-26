@@ -1,0 +1,44 @@
+{% extends 'base/base.html'%}
+{% load static %}
+
+{% block title %}
+    PokeBank
+{% endblock %}
+
+{% block extrastatic %}
+    <link rel="stylesheet" href="{% static 'pokemon/catalogo_tipos.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="titulo">Gotta Catch'em All!</h1>
+
+
+    {% for pokemon in resultados %}
+    <div class="cards">
+        <li class="poke-name">{{ pokemon.pokemon.name }}</li>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon.id }}.png"
+            alt="{{ pokemon.name }}">
+        <p>
+            <a href="{% url 'pokemon:pokemon_info' pokemon.id %}" target="_blank" class="botton">
+                Más Información
+            </a>
+        </p>
+        <br>
+    </div>
+    {% endfor %}
+
+
+    <div class="pag">
+        {% if offset > 0 %}
+            <a class="botton" href="?offset={{ offset|add:'-10' }}">
+                Anterior
+            </a>
+        {% endif %}
+        <a class="botton" href="?offset={{ offset|add:'10' }}">
+            Siguiente
+        </a>
+    </div>
+
+{% endblock %}
+    
+    

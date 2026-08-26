@@ -1,0 +1,23 @@
+body {
+    color: #122f51
+}
+
+.navbar-pokebank {
+    background-color: #122f51;
+    border-color: #122f51;
+    border-radius: 5;
+}
+
+.navbar-pokebank .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-pokebank .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-pokebank .navbar-nav > li > a:hover {
+    color: #122f51;
+    background-color: white;
+}

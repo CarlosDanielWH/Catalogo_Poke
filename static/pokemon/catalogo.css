@@ -1,0 +1,29 @@
+
+.botton{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #122f51;
+    color: #f3d7c2;           
+    text-decoration: none;      
+    border-radius: 5px;      
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none;                
+    cursor: pointer;             
+    transition: background-color 0.3s; 
+    margin-bottom: 30px;
+    }
+    
+.titulo{
+    text-align: center;
+    font-weight: bold;
+    }
+
+.poke-name{
+    font-weight: bold;
+    font-size: 18pt;
+    }
+
+.pag{
+    text-align: center;
+    }

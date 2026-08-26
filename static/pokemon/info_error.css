@@ -1,0 +1,36 @@
+.tipo-pokemon {
+        display: inline-block;
+        padding: 1px 10px 1px 10px;
+        color: #F8F8F8;          
+        text-decoration: none;      
+        border-radius: 5px;      
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        border: none;                
+        cursor: pointer;             
+        border-style: solid none;
+        border-width: 1px;
+        font-variant: small-caps;
+        font-size: 12pt;
+        text-shadow: 0 1px 1px #807870;
+    }
+
+    .flying{
+        background-color: #A890F0;
+        border-top-color: #C8C0F8;
+        border-bottom-color: #705898;
+    }
+
+    .nine{
+        background-color: rgb(104, 160, 144);
+        border-top-color: #C8C0F8;
+        border-bottom-color: #705898;
+    }
+
+    .error{
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        color: red;
+
+    }
